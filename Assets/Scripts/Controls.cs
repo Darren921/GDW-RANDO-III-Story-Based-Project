@@ -80,6 +80,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Talk"",
+                    ""type"": ""Button"",
+                    ""id"": ""e1fed016-48d5-4059-a047-944fde4c2ad1"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -214,6 +223,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""action"": ""LeftClick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5089a965-8a00-45a7-88c2-26c62b61e6e8"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Talk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -228,6 +248,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         m_InGame_MousePos = m_InGame.FindAction("MousePos", throwIfNotFound: true);
         m_InGame_Hide = m_InGame.FindAction("Hide", throwIfNotFound: true);
         m_InGame_LeftClick = m_InGame.FindAction("LeftClick", throwIfNotFound: true);
+        m_InGame_Talk = m_InGame.FindAction("Talk", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -295,6 +316,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
     private readonly InputAction m_InGame_MousePos;
     private readonly InputAction m_InGame_Hide;
     private readonly InputAction m_InGame_LeftClick;
+    private readonly InputAction m_InGame_Talk;
     public struct InGameActions
     {
         private @Controls m_Wrapper;
@@ -305,6 +327,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         public InputAction @MousePos => m_Wrapper.m_InGame_MousePos;
         public InputAction @Hide => m_Wrapper.m_InGame_Hide;
         public InputAction @LeftClick => m_Wrapper.m_InGame_LeftClick;
+        public InputAction @Talk => m_Wrapper.m_InGame_Talk;
         public InputActionMap Get() { return m_Wrapper.m_InGame; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -332,6 +355,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @LeftClick.started += instance.OnLeftClick;
             @LeftClick.performed += instance.OnLeftClick;
             @LeftClick.canceled += instance.OnLeftClick;
+            @Talk.started += instance.OnTalk;
+            @Talk.performed += instance.OnTalk;
+            @Talk.canceled += instance.OnTalk;
         }
 
         private void UnregisterCallbacks(IInGameActions instance)
@@ -354,6 +380,9 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             @LeftClick.started -= instance.OnLeftClick;
             @LeftClick.performed -= instance.OnLeftClick;
             @LeftClick.canceled -= instance.OnLeftClick;
+            @Talk.started -= instance.OnTalk;
+            @Talk.performed -= instance.OnTalk;
+            @Talk.canceled -= instance.OnTalk;
         }
 
         public void RemoveCallbacks(IInGameActions instance)
@@ -379,5 +408,6 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         void OnMousePos(InputAction.CallbackContext context);
         void OnHide(InputAction.CallbackContext context);
         void OnLeftClick(InputAction.CallbackContext context);
+        void OnTalk(InputAction.CallbackContext context);
     }
 }

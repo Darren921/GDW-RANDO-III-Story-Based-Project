@@ -1,5 +1,6 @@
 using Cinemachine;
 using System.Collections;
+using DialogueEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,6 +46,10 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource heartBeat;
     private Enemy _enemy;
     [SerializeField] AudioClip heartbeatS, heartbeatSM, heartbeatM, heartbeatF;
+    
+    //Storybased
+    public bool isTalking { get;  set; }
+
 
     void Start()
     {
@@ -147,6 +152,8 @@ public class Player : MonoBehaviour
         }
         
     }
+
+    
 
     public void startSprint()
     {
@@ -260,10 +267,22 @@ public class Player : MonoBehaviour
 
     public void leftClick()
     {
-
         rightClick();
-        
     }
+
+    public void interactable()
+    {
+        isTalking = true;
+    }
+    public void notInteractable()
+    {
+        isTalking = false;
+    }
+        
+    
+
+   
+
 
     public void rightClick()
     {

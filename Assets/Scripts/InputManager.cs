@@ -42,6 +42,14 @@ public class InputManager : MonoBehaviour
         {
             player.leftClick();
         };
+        controls.InGame.Talk.performed += _ =>
+        {
+            player.interactable();
+        };
+        controls.InGame.Talk.canceled += _ =>
+        {
+            player.notInteractable();
+        };
 
     }
    

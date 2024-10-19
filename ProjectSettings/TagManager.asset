@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Exit
+  - WalkinBypass
   layers:
   - Default
   - TransparentFX
