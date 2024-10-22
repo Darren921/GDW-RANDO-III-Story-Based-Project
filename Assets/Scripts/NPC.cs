@@ -1,30 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Net.Mime;
 using Cinemachine;
 using DialogueEditor;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class NPC : MonoBehaviour
 {
     private NPCConversation conversation;
-    
-    [SerializeField]
-    CinemachineInputProvider InputProvider;
-    private bool talkedToFirst;
+    private QuestManager questManager;
     private bool walkInBypass;
     private Player _player;
+    private bool Foolish;
+    TextMeshProUGUI interactText;
     // Start is called before the first frame update
     void Start()
     {
+        questManager =FindObjectOfType<QuestManager>();
         conversation = GetComponent<NPCConversation>();
         _player = FindObjectOfType<Player>();   
+        interactText = GameObject.Find("TalkText").GetComponent<TextMeshProUGUI>();
     }
 
   
      void OnTriggerEnter (Collider other)
      {
+     
          switch (tag)
          {
              case "WalkinBypass":
@@ -32,77 +32,104 @@ public class NPC : MonoBehaviour
                  break;
          }
 
-       
-    
-       
 
-       
-        if (!talkedToFirst && !ConversationManager.Instance.IsConversationActive && walkInBypass )
+
+
+         if (other.tag == "Player" && name != "You" && !ConversationManager.Instance.IsConversationActive)
+         {
+             interactText.text = "Press 'E' to talk";
+             interactText.gameObject.SetActive(true);
+         }
+         
+        if (!ConversationManager.Instance.IsConversationActive && walkInBypass )
         {
-            talkedToFirst = true; 
             ConversationManager.Instance.StartConversation(conversation);
-            Cursor.lockState = CursorLockMode.None;
-            InputProvider.enabled = false;
-            InputManager.DisableInGame(); 
+            if (ConversationManager.Instance.GetBool("talkedToFirst") != null)
+            {
+                if (!ConversationManager.Instance.GetBool("talkedToFirst"))
+                {
+                    questManager.convoLock();
+                }
+            }
+           
             
         }
 
-        if (other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking && talkedToFirst && !walkInBypass)
+        if ( other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking  && !walkInBypass)
         {
             ConversationManager.Instance.StartConversation(conversation);
-            Cursor.lockState = CursorLockMode.None;
-            InputProvider.enabled = false;
+            questManager.convoLock();
+            interactText.gameObject.SetActive(false);
         }
      
       
     }
     void OnTriggerStay (Collider other)
     {
-        switch (this.name)
+        switch (tag)
         {
-            case "Npc":
+            case "WalkinBypass":
                 walkInBypass = true;
                 break;
         }
-         if (talkedToFirst && !ConversationManager.Instance.IsConversationActive)
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            InputProvider.enabled = true;
-            InputManager.EnableInGame();
+         if (!ConversationManager.Instance.IsConversationActive && !_player.isTalking)
+         {
+             
+             print("unlocked");
+             questManager.convoUnlock();
+             walkInBypass = false;
         }
-        if (other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking   && !walkInBypass)
+        if (  other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking   && !walkInBypass)
         {
             ConversationManager.Instance.StartConversation(conversation);
-            Cursor.lockState = CursorLockMode.None;
-            InputProvider.enabled = false;
+            questManager.convoLock();
         }
+        
+        
        
       
     }
     void OnTriggerExit (Collider other)
     {
-            ConversationManager.Instance.EndConversation();
-            Cursor.lockState = CursorLockMode.Locked;
-            InputProvider.enabled = true;
-            walkInBypass = false;
+          questManager.convoUnlock();
+          walkInBypass = false;
+          interactText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-       print(_player.isTalking); ;
     }
 
-    public void DestoyThis()
+    public void DisableThis()
     {
         gameObject.SetActive(false);
-        ConversationManager.Instance.EndConversation();
-        Cursor.lockState = CursorLockMode.Locked;
-        InputProvider.enabled = true;
+        questManager.convoUnlock();
         walkInBypass = false;
-        InputManager.EnableInGame(); 
-
+  
     }
 
-    
+   public  void CheckConvo()
+    {
+        if (Foolish)
+        {
+            ConversationManager.Instance.SetBool("Foolish",true);
+
+        }
+        print(name);
+        print(ConversationManager.Instance.GetBool("Foolish"));
+        switch (name)
+        {
+            case "NPC 1":
+                if (ConversationManager.Instance.GetBool("Foolish") && !Foolish )
+                {
+                    print("foolish");
+                    Foolish = true;
+                }
+
+                
+            
+                break;
+        }
+    }
 }
