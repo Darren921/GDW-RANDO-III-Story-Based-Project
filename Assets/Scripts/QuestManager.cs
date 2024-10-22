@@ -19,6 +19,7 @@ public class QuestManager : MonoBehaviour
         _player = FindObjectOfType<Player>();
     }
 
+   
     public void convoLock()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -37,14 +38,6 @@ public class QuestManager : MonoBehaviour
     }
 
   
-    public void startQuest(string QuestName)
-    {
-        
-    }
 
-    public void endQuest(string QuestName)
-    {
-        
-    }
     
 }
