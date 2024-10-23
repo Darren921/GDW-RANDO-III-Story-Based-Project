@@ -8,6 +8,7 @@ public class NPC : MonoBehaviour
     private NPCConversation conversation;
     private QuestManager questManager;
     private bool walkInBypass;
+    private bool TalkedToFirst;
     private Player _player;
     public static bool Pos1F, Pos2F, Pos3F, Neg1F, Neg2F, Neg3F;
 
@@ -42,11 +43,18 @@ public class NPC : MonoBehaviour
             interactText.gameObject.SetActive(true);
         }
 
-        if (!ConversationManager.Instance.IsConversationActive && walkInBypass)
+        if (!ConversationManager.Instance.IsConversationActive && walkInBypass && !TalkedToFirst)
         {
             ConversationManager.Instance.StartConversation(conversation);
+            if (ConversationManager.Instance.GetBool("TalkedToFirst") != null)
+            {
+                if (ConversationManager.Instance.GetBool("TalkedToFirst") == false)
+                {
+                    questManager.convoLock();
+                    TalkedToFirst = true;
+                }
 
-            questManager.convoLock();
+            }
 
 
 

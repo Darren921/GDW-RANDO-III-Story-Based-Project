@@ -33,7 +33,7 @@ public class QuestManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
         InputProvider.enabled = true;
         InputManager.EnableInGame();  
-        _player.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        _player.GetComponent<Rigidbody>().velocity -= _player.GetComponent<Rigidbody>().velocity ;
      
     }
 
