@@ -43,8 +43,8 @@ public class NPC : MonoBehaviour
 
         if (other.tag == "Player" && name != "You" && !ConversationManager.Instance.IsConversationActive)
         {
-            interactText.text = "Press 'E' to talk";
-            interactText.gameObject.SetActive(true);
+           
+            interactText.enabled = true;
         }
 
         if (!ConversationManager.Instance.IsConversationActive && walkInBypass && !TalkedToFirst)
@@ -69,7 +69,7 @@ public class NPC : MonoBehaviour
         {
             ConversationManager.Instance.StartConversation(conversation);
             questManager.convoLock();
-            interactText.gameObject.SetActive(false);
+           interactText.enabled = false;
         }
 
 
@@ -87,7 +87,7 @@ public class NPC : MonoBehaviour
         if (!ConversationManager.Instance.IsConversationActive && !_player.isTalking)
         {
 
-            print("unlocked");
+          //  print("unlocked");
             questManager.convoUnlock();
             walkInBypass = false;
         }
@@ -97,7 +97,7 @@ public class NPC : MonoBehaviour
         {
             ConversationManager.Instance.StartConversation(conversation);
             questManager.convoLock();
-            interactText.gameObject.SetActive(false);
+            interactText.enabled = false;
 
         }
 
@@ -110,12 +110,18 @@ public class NPC : MonoBehaviour
     {
         questManager.convoUnlock();
         walkInBypass = false;
-        interactText.gameObject.SetActive(false);
+        interactText.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        print(Pos1F);
+        print(Pos2F);
+        print(Pos3F);
+        print(Neg1F);
+        print(Neg2F);
+        print(Neg3F);
     }
 
     public void DisableThis()
@@ -174,8 +180,7 @@ public class NPC : MonoBehaviour
         }
 
         print(name);
-        print(ConversationManager.Instance.GetBool("Positive1Found"));
-        print(ConversationManager.Instance.GetBool("Negative1Found")); 
+     
         switch (name)
         {
             case "NPC 1":
