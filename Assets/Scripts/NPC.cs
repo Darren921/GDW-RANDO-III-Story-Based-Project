@@ -178,6 +178,19 @@ public class NPC : MonoBehaviour
                 ConversationManager.Instance.SetBool("Negative3Found", true);
             }
         }
+        if(Freedom)
+        {
+            
+        }
+        if(Limbo)
+        {
+            
+        }
+
+        if (Death)
+        {
+            
+        }
 
         print(name);
      
