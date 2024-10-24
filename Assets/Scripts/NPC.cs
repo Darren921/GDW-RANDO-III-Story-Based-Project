@@ -13,6 +13,10 @@ public class NPC : MonoBehaviour
     public static bool Pos1F, Pos2F, Pos3F, Neg1F, Neg2F, Neg3F;
 
     TextMeshProUGUI interactText;
+    private bool Limbo;
+    private bool Death;
+    private bool Freedom;
+
 
     // Start is called before the first frame update
     void Start()
@@ -132,12 +136,40 @@ public class NPC : MonoBehaviour
                 ConversationManager.Instance.SetBool("Positive1Found", true);
             }
         }
+        if (Pos2F)
+        {
+            if (ConversationManager.Instance.GetBool("Positive2Found") != null)
+            {
+                ConversationManager.Instance.SetBool("Positive2Found", true);
+            }
+        }
+        if (Pos3F)
+        {
+            if (ConversationManager.Instance.GetBool("Positive3Found") != null)
+            {
+                ConversationManager.Instance.SetBool("Positive3Found", true);
+            }
+        }
 
         if (Neg1F)
         {
             if (ConversationManager.Instance.GetBool("Negative1Found") != null)
             {
                 ConversationManager.Instance.SetBool("Negative1Found", true);
+            }
+        }
+        if (Neg2F)
+        {
+            if (ConversationManager.Instance.GetBool("Negative2Found") != null)
+            {
+                ConversationManager.Instance.SetBool("Negative2Found", true);
+            }
+        }
+        if (Neg3F)
+        {
+            if (ConversationManager.Instance.GetBool("Negative3Found") != null)
+            {
+                ConversationManager.Instance.SetBool("Negative3Found", true);
             }
         }
 
@@ -157,6 +189,45 @@ public class NPC : MonoBehaviour
                 {
                     Neg1F = true;
                 }
+                break;
+            case "NPC 3":
+                if (ConversationManager.Instance.GetBool("Positive2Found") && !Pos2F)
+                {
+                    Pos2F = true;
+                }
+                break;
+            case "NPC 4":
+                if (ConversationManager.Instance.GetBool("Negative2Found") && !Neg2F)
+                {
+                    Neg2F = true;
+                }
+                break;
+            case "NPC 5":
+                if (ConversationManager.Instance.GetBool("Positive3Found") && !Pos3F)
+                {
+                    Pos3F  = true;
+                }
+                break;
+            case "NPC 6":
+                if (ConversationManager.Instance.GetBool("Negative3Found") && !Neg3F)
+                {
+                    Neg3F  = true;
+                }
+                break;
+            case "Monster":
+                if (ConversationManager.Instance.GetBool("Limbo") && !Limbo)
+                {
+                    Limbo  = true;
+                }
+                else if (ConversationManager.Instance.GetBool("Death") && !Death)
+                {
+                    Death  = true;
+                }
+                else if (ConversationManager.Instance.GetBool("Freedom") && !Freedom)
+                {
+                    Freedom  = true;
+                }
+
                 break;
         }
     }
