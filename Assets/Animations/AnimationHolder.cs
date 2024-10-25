@@ -19,7 +19,7 @@ public class AnimationHolder : MonoBehaviour
     IEnumerator daaaaaa()
     {
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene("Menu");
+        SceneManager.LoadScene("MainMenu");
     }
     public void life()
     {

@@ -14,4 +14,8 @@ public class DOOOR : MonoBehaviour
             SceneManager.LoadScene("GoodEnding");
         }
     }
+    public void mains()
+    {
+        SceneManager.LoadScene("NarrativeTest");
+    }
 }
