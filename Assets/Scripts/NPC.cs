@@ -1,7 +1,10 @@
 
 using DialogueEditor;
+using System.Collections;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NPC : MonoBehaviour
 {
@@ -16,7 +19,9 @@ public class NPC : MonoBehaviour
     private bool Limbo;
     private bool Death;
     private bool Freedom;
-
+    [SerializeField] private Animator Limbomator;
+    [SerializeField] private GameObject Deathmator;
+    [SerializeField] private Animator Freedommator;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +30,7 @@ public class NPC : MonoBehaviour
         conversation = GetComponent<NPCConversation>();
         _player = FindObjectOfType<Player>();
         interactText = GameObject.Find("TalkText").GetComponent<TextMeshProUGUI>();
+
     }
 
 
@@ -180,7 +186,7 @@ public class NPC : MonoBehaviour
         }
         if(Freedom)
         {
-            
+          //  Freedommator.Play("Door Open");
         }
         if(Limbo)
         {
@@ -189,7 +195,8 @@ public class NPC : MonoBehaviour
 
         if (Death)
         {
-            
+           // Deathmator.SetActive(true);
+           /// StartCoroutine(deathanddie());
         }
 
         print(name);
@@ -248,6 +255,11 @@ public class NPC : MonoBehaviour
 
                 break;
         }
+    }
+    private IEnumerator deathanddie()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
