@@ -11,7 +11,7 @@ public class DOOOR : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("GoodEnding");
+            SceneManager.LoadScene("MainMenu");
         }
     }
     public void mains()
