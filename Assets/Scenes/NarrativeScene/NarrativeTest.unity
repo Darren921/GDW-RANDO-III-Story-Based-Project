@@ -334,7 +334,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83731aa49781bf647b18c7562d5f3d8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 260.41843
+      value: 262.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83731aa49781bf647b18c7562d5f3d8c,
         type: 3}
@@ -344,7 +344,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 83731aa49781bf647b18c7562d5f3d8c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44.857582
+      value: 46.22
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 83731aa49781bf647b18c7562d5f3d8c,
         type: 3}
@@ -1625,7 +1625,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 100.733
+      value: 30.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -1635,12 +1635,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.504
+      value: -63.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -1650,7 +1650,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -1665,7 +1665,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -1865,7 +1865,7 @@ Transform:
   m_GameObject: {fileID: 308691503}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 344.63507, y: -68.84027, z: -87.75035}
+  m_LocalPosition: {x: 344.63507, y: -68.84027, z: -87.9}
   m_LocalScale: {x: 10.584078, y: 8.237055, z: 18.992304}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2311,7 +2311,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 82.2
+      value: 29.89
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -2321,12 +2321,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 49.33
+      value: 160.7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -2341,7 +2341,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -2351,7 +2351,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1563f23fe702c924da9c5cae2aa40218,
         type: 3}
@@ -4254,7 +4254,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7d15099f80f840c47bdbd5c74cbc55b2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 364.76385
+      value: 296.58
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d15099f80f840c47bdbd5c74cbc55b2,
         type: 3}
@@ -4264,7 +4264,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7d15099f80f840c47bdbd5c74cbc55b2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 16.82
+      value: 16.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7d15099f80f840c47bdbd5c74cbc55b2,
         type: 3}
@@ -5541,32 +5541,32 @@ PrefabInstance:
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 786.01996
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1000
+      value: 786.01996
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1000
+      value: 786.01996
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 58.15
+      value: 20.89
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.29
+      value: 6.43
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -110.08
+      value: -107.8
       objectReference: {fileID: 0}
     - target: {fileID: 5420927239191434857, guid: 201a38adcb08f714cb8d172dd658e90a,
         type: 3}
@@ -8398,11 +8398,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 34
-  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":179.499939,\"yPos\":553.3995},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
-    light in the dark for others, but was that all?\\n\",\"parentUIDs\":[33],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"Positive1Found\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":181.5,\"yPos\":22},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"In
-    the past you were a renowned hero and fearless warrior to your nation.\\r\\n\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Spirit\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.2,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":172.166656,\"yPos\":182.666412},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"(That\u2019s
+  json: "{\"Options\":[{\"Connections\":[],\"EditorInfo\":{\"isRoot\":false,\"xPos\":82.49994,\"yPos\":642.3995},\"ID\":22,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"A
+    light in the dark for others, but was that all?\\n\",\"parentUIDs\":[33],\"SpeechUID\":-1}],\"Parameters\":[{\"__type\":\"EditableBoolParameter:#DialogueEditor\",\"ParameterName\":\"Positive1Found\",\"BoolValue\":false}],\"SpeechNodes\":[{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":1}],\"EditorInfo\":{\"isRoot\":true,\"xPos\":84.5,\"yPos\":111},\"ID\":0,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"In
+    the past you were a renowned hero and fearless warrior to your nation.\\r\\n\",\"parentUIDs\":[],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Spirit\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0.2,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableSpeechConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":33}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":75.16666,\"yPos\":271.6664},\"ID\":1,\"ParamActions\":[],\"TMPFontGUID\":null,\"Text\":\"(That\u2019s
     right, I was a hero to the kingdom and a high ranking member of the imperial
-    army)\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"You\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":177,\"yPos\":378.999939},\"ID\":33,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"Positive1Found\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"The
+    army)\",\"parentUIDs\":[0],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"You\",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0},{\"Connections\":[{\"__type\":\"EditableOptionConnection:#DialogueEditor\",\"Conditions\":[],\"NodeUID\":22}],\"EditorInfo\":{\"isRoot\":false,\"xPos\":80,\"yPos\":467.999939},\"ID\":33,\"ParamActions\":[{\"__type\":\"EditableSetBoolParamAction:#DialogueEditor\",\"ParameterName\":\"Positive1Found\",\"Value\":true}],\"TMPFontGUID\":null,\"Text\":\"The
     amount of people you saved through your actions during the war is nothing short
     of incredible!\\r\\n\",\"parentUIDs\":[1],\"AdvanceDialogueAutomatically\":false,\"AudioGUID\":null,\"AutoAdvanceShouldDisplayOption\":false,\"IconGUID\":null,\"Name\":\"Spirit
     \",\"OptionUIDs\":null,\"SpeechUID\":0,\"TimeUntilAdvance\":0,\"Volume\":0}]}"
@@ -10159,6 +10159,7 @@ GameObject:
   - component: {fileID: 1871277237}
   - component: {fileID: 1871277236}
   - component: {fileID: 1871277235}
+  - component: {fileID: 1871277238}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -10252,6 +10253,18 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871277233}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1871277238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871277233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945c7865f997a3444b4305a1b18f8009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1902850060
 PrefabInstance:
   m_ObjectHideFlags: 0
