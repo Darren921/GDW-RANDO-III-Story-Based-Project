@@ -21,7 +21,13 @@ public class InputManager : MonoBehaviour
         controls.InGame.Movement.performed += _ =>
         {
             player.SetMoveDirection(_.ReadValue<Vector3>());
+            player.walkingSound();
         };
+        controls.InGame.Movement.canceled += _ =>
+        {
+            player.stopWalkingSound();
+        };
+        
         controls.InGame.Sprint.performed += _ =>
         {
             player.startSprint();

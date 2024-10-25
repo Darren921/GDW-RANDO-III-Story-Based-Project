@@ -49,6 +49,7 @@ public class Player : MonoBehaviour
     
     //Storybased
     public bool isTalking { get;  set; }
+    [SerializeField] AudioSource walking;
 
 
     void Start()
@@ -61,6 +62,7 @@ public class Player : MonoBehaviour
         InputManager.EnableInGame();
         CamTransform = Camera.main.transform;
         Cursor.lockState = CursorLockMode.Locked;
+        
 
     }
 
@@ -296,6 +298,18 @@ public class Player : MonoBehaviour
             Debug.Log(f);
         }
     
+    }
+    public void stopWalkingSound()
+    {
+       walking.enabled = false;
+    }
+
+    public void walkingSound()
+    {
+        if (!walking.isPlaying)
+        {
+            walking.enabled = true;
+        }
     }
 }
     
