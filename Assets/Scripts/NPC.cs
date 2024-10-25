@@ -53,7 +53,7 @@ public class NPC : MonoBehaviour
             interactText.enabled = true;
         }
 
-        if (!ConversationManager.Instance.IsConversationActive && walkInBypass && !TalkedToFirst)
+        if (!ConversationManager.Instance.IsConversationActive && walkInBypass && !TalkedToFirst && Death != true)
         {
             ConversationManager.Instance.StartConversation(conversation);
             if (ConversationManager.Instance.GetBool("TalkedToFirst") != null)
@@ -71,7 +71,7 @@ public class NPC : MonoBehaviour
         }
 
         if (other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking &&
-            !walkInBypass)
+            !walkInBypass && Death != true)
         {
             ConversationManager.Instance.StartConversation(conversation);
             questManager.convoLock();
@@ -90,7 +90,7 @@ public class NPC : MonoBehaviour
                 break;
         }
 
-        if (!ConversationManager.Instance.IsConversationActive && !_player.isTalking)
+        if (!ConversationManager.Instance.IsConversationActive && !_player.isTalking && Death != true)
         {
 
           //  print("unlocked");
@@ -99,14 +99,14 @@ public class NPC : MonoBehaviour
         }
 
         if (other.tag == "Player" && !ConversationManager.Instance.IsConversationActive && _player.isTalking &&
-            !walkInBypass)
+            !walkInBypass && Death != true)
         {
             ConversationManager.Instance.StartConversation(conversation);
             questManager.convoLock();
             interactText.enabled = false;
 
         }
-
+        
 
 
 
@@ -258,8 +258,10 @@ public class NPC : MonoBehaviour
     }
     private IEnumerator deathanddie()
     {
+        questManager.convoLock();
         yield return new WaitForSeconds(3);
         SceneManager.LoadScene("MainMenu");
+      
     }
 }
 
