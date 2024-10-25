@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Outline1 1
-  m_Shader: {fileID: -6465566751694194690, guid: 8a004ace0670cca48959c38c69156c7a,
+  m_Name: spirit
+  m_Shader: {fileID: -6465566751694194690, guid: cce7a4fab7045e34289c3cb1238c6433,
     type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -38,13 +38,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Outline_Thickness: 0.073
+    - _Cutoff: -0.39
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Colour: {r: 1, g: 1, b: 1, a: 0}
+    - _MainColor: {r: 0.05700427, g: 0.45326144, b: 0.5754717, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4954718103609973345
+--- !u!114 &6576929447359636481
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
