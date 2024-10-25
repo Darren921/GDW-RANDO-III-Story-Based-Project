@@ -68,7 +68,13 @@ public class Player : MonoBehaviour
 
     
     void Update()
-    { 
+    {
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) ||
+            Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            stopWalkingSound();
+        }
+        
         // remove this after
         // distance = Vector3.Distance(transform.position, _enemy.transform.position);
        
@@ -305,11 +311,8 @@ public class Player : MonoBehaviour
     }
 
     public void walkingSound()
-    {
-        if (!walking.isPlaying)
-        {
-            walking.enabled = true;
-        }
+    { 
+        walking.enabled = true;
     }
 }
     
